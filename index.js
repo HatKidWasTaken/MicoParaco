@@ -11,6 +11,8 @@ client.on('messageDelete', async function(message){
   let q = await client.snipes.get(message.channel.id);
   let size = q ? q.length : 0;
 
+  if(message.content.startsWith(`${prefix}c`) || message.content.startsWith(`${prefix}cal`)) return;
+
   let values = {
     content: message.content,
     author: message.author.tag,
@@ -27,7 +29,7 @@ client.on('messageDelete', async function(message){
   for(let i = 0; i < size; i++){
     await oldValues.push(q[i])
   }
-
+  
   client.snipes.set(message.channel.id, oldValues);
 
   /* Papi remastered por el FurroG */
@@ -37,6 +39,8 @@ client.editsnipes = new Map();
 client.on('messageUpdate', async function(message) {
   let q = await client.editsnipes.get(message.channel.id);
   let size = q ? q.length : 0;
+
+  if(message.content.startsWith(`${prefix}c`) || message.content.startsWith(`${prefix}cal`)) return;
 
   let values = {
     content: message.content,

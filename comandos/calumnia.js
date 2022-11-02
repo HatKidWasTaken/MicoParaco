@@ -16,6 +16,8 @@ if(!message.content.startsWith(prefix)) return;
 
 // m!c @JeffreyG no soy furro
 
+message.delete();
+
 let erremb = new Discord.MessageEmbed()
 .setAuthor("⚠ERROR: Debes colocar una id válida al inicio del mensaje.⚠")
 .setDescription("Ejemplo: m!c 433774240626507796 ola dralin")
