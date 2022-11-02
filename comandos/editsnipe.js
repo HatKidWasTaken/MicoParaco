@@ -21,7 +21,7 @@ const msg = client.editsnipes.get(message.channel.id);
 
 let query = args[0] && Number(args[0]) ? Number(args[0])-1 : 0;
 
-if(!msg[query]) return(
+if(!msg || !msg[query]) return(
   message.channel.send(err)
 )
 
