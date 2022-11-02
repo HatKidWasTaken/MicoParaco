@@ -11,6 +11,8 @@ module.exports.run = async (client, message, args) => {
   let member = message.member;
   let bm = args.join(" ");
 
+  console.log('por ahí')
+
 if(!message.content.startsWith(prefix)) return;
 if(message.author.bot) return;
 

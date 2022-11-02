@@ -6,7 +6,6 @@ require('dotenv').config();
 
 let prefix = Config.prefix;
 
-
 client.snipes = new Map();
 client.on('messageDelete', async function(message){
   let q = await client.snipes.get(message.channel.id);
@@ -80,7 +79,7 @@ client.on("message", async message => {
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
-  
+
     let author = message.author;
     let guild = message.guild;
     let member = message.member;
