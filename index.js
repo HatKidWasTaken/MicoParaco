@@ -108,7 +108,7 @@ client.on("message", async message => {
       console.log("Me prendí.");
 
    
-     let bulchannel = client.channels.cache.get("844923930451509278");
+   /*  let bulchannel = client.channels.cache.get("844923930451509278");
 
     let bulemb = new Discord.MessageEmbed()
     .setAuthor("⚠ RECCORDATORIO ⚠")
@@ -118,9 +118,9 @@ client.on("message", async message => {
     function bul() {
         bulchannel.send(bulemb)
     }
-    setInterval(bul, 10800000);
+    setInterval(bul, 10800000);*/
 
-    })
+    }) 
 
 client.login(process.env.TOKEN)
 
